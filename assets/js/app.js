@@ -55,8 +55,8 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
 // =========================>success
 function showSuccessToast() {
     toast({
-        title: "Thành công!",
-        message: "Chúng tôi sẽ liên hệ cho bạn trong thời gian tới !!!",
+        title: "Success!",
+        message: "We will contact you in the near future !!!",
         type: "success",
         duration: 5000
     });
@@ -64,8 +64,8 @@ function showSuccessToast() {
 // ===========================> error
 function showErrorToast() {
     toast({
-        title: "Thất bại!",
-        message: "Có lỗi !! Bạn cần nhập đầy đủ thông tin",
+        title: "Failed!",
+        message: "Error !! You need to enter complete information",
         type: "error",
         duration: 5000
     });
@@ -108,11 +108,11 @@ function showSuccess(input) {
 function checkLength(input, min, max) {
     input.value = input.value.trim()
     if (input.value.length < min) {
-        showError(input, `phai co it nhat ${min} ky tu`)
+        showError(input, `must have at least ${min} characters`)
         return true;
     }
     if (input.value.length > max) {
-        showError(input, `khong duoc qua ${max} ky tu`)
+        showError(input, `Cannot exceed ${max} characters`)
         return true;
     }
     showSuccess()
